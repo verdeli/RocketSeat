@@ -1,6 +1,6 @@
 import { Category } from '../model/Category';
 
-//DTO - Data tranfer object
+//DTO - Data tranfer object 
 interface ICreateCategoryDTO {
   name: string;
   description: string;
@@ -29,6 +29,10 @@ class CategoriesRepository {
   }
   list(): Category[] {
     return this.categories;
+  }
+  findByname(name: string) {
+    const category = this.categories.find((category => category.name === name));
+    return category;
   }
 }
 
