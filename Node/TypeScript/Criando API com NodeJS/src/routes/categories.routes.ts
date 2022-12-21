@@ -26,3 +26,5 @@ categoriesRoutes.get("/", (request, response) => {
 });
 
 export { categoriesRoutes };
+
+//made for verdeliiin
