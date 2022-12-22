@@ -1,12 +1,13 @@
+import { ICategoriesRepository } from './ICategoriesRepository';
 import { Category } from '../model/Category';
 
-//DTO - Data tranfer object 
+// DTO - Data tranfer object 
 interface ICreateCategoryDTO {
   name: string;
   description: string;
 }
 
-class CategoriesRepository {
+class CategoriesRepository implements ICategoriesRepository {
 
   private categories: Category[];
 
@@ -15,6 +16,11 @@ class CategoriesRepository {
     this.categories = [];
 
   }
+
+  findByName(name: string): Category {
+    throw new Error('Method not implemented.');
+  }
+
   create({ name, description }: ICreateCategoryDTO): void {
     const category = new Category();
 
