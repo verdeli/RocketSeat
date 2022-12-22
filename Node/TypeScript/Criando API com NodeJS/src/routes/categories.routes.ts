@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { CreateCategoryService } from '../services/CreateCategoryService';
-import { CategoriesRepository } from '../repositories/CategoriesRepository';
-import { PostgresCategoriesRepository } from '../repositories/PostgresCategoriesRepository';
+import { CreateCategoryService } from '../modules/cars/services/CreateCategoryService';
+import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository';
+import { PostgresCategoriesRepository } from '../modules/cars/repositories/PostgresCategoriesRepository';
 
 const categoriesRoutes = Router();
 
@@ -25,4 +25,4 @@ categoriesRoutes.get("/", (request, response) => {
 
 export { categoriesRoutes };
 
-//made for verdeliiin
+//made for verdeliiins
